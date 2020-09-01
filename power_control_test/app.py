@@ -42,7 +42,7 @@ def main(filename):
             performance = json_data[key]
         if key == 'Hardware_Test':
             hardware = json_data[key]
-    print('\033[1;32mtests is:')
+    print('\033[1;32mtest list:')
     for key in json_data:
         print('{}:'.format(key))
         for item in json_data[key]:
