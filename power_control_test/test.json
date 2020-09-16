@@ -44,6 +44,15 @@
                 "serverip":"192.168.1.118",
                 "speed":100
             }
+        },
+        {
+            "type":"jc_test",
+            "param":{
+                "ip":"192.168.3.39",
+                "port": 1883,
+                "interval": 3,
+                "times": 4
+            }
         }
     ]
 }

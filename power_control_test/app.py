@@ -3,6 +3,7 @@ import os
 import json
 from test import test
 from menu import menu
+from record import record
 def main(filename):
     json_data = {}
     hardware = []
@@ -42,7 +43,7 @@ def main(filename):
             performance = json_data[key]
         if key == 'Hardware_Test':
             hardware = json_data[key]
-    print('\033[1;32mtest list:')
+    print('\033[1;32mtests is:')
     for key in json_data:
         print('{}:'.format(key))
         for item in json_data[key]:
@@ -56,6 +57,7 @@ def main(filename):
     result.extend(test(performance, 'performance'));
     result.extend(test(hardware, 'hardware'))
     result.extend(test(stress, 'stress'))
+    record(result)
     print(result)
     return
 

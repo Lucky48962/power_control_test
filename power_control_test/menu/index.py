@@ -25,7 +25,7 @@ def menu(config):
             return d
         
 def second_level(t, config):
-    print('test list:')
+    print('test:')
     items = []
     index = 0
     result = {
@@ -46,7 +46,7 @@ def second_level(t, config):
     while 1:
         d = ''
         if t == 2:
-            d = input('please input test num(num&&back&&exit):').strip()
+            d = input('please input test num:').strip()
         if t == 3:
             d = input('please input tests num(like:0 2 3):\n').strip()
         if d == 'exit' or d == 'back':
@@ -77,12 +77,12 @@ def second_level(t, config):
 def first_level():
     print(
         'please select test type:\n'
-        '1.global test\n'
-        '2.unit test\n'
-        '3.Multiple unit test\n'
-        ''
+        '1.entire test\n'
+        '2.one test\n'
+        '3.userdefine test\n'
+        'input exit to exit'
     )
-    result = input('input num:')
+    result = input('input No.:')
     if result.isdigit():
         if int(result) > 4:
             return 'back'

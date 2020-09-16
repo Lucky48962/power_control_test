@@ -19,16 +19,16 @@ def eth_speed(d):
     if speed == -1:
         result.append({
             "flag": False,
-            "message": "Eth speed test failed"
+            "message": 'cant connect iperf server!'
         })
-    if speed < standard:
+    elif speed < standard:
         result.append({
             "flag": False,
-            "message": "Eth speed is {} Mb/s".format(str(speed))
+            "message": 'Eth speed is {} Mb/s'.format(str(speed))
         })
-    if speed >= standard:
+    elif speed >= standard:
         result.append({
             "flag": True,
-            "message": "Eth speed is {} Mb/s".format(str(speed))
+            "message": 'Eth speed is {} Mb/s'.format(str(speed))
         })
     return result
